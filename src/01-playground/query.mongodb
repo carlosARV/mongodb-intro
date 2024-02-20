@@ -1,4 +1,10 @@
+use("platzi_store")
+
+
+db.zips.find()
+
+/*
 use("sample_training")
 
-
 db.zips.find({state: "NY"}).count()
+*/

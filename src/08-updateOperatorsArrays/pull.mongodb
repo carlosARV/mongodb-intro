@@ -1,0 +1,16 @@
+use("platzi_store")
+
+/*
+db.inventory.updateMany({}, { // Dejar el id en blanco causa que todos los ids se actualicen
+  $pull: { // quitamos los tags que lleven una cadena de texto especifica
+    tags: "book"7
+  }
+})
+*/
+
+// Eliminar varios elementos de un array
+db.inventory.updateMany({}, { // Dejar el id en blanco causa que todos los ids se actualicen
+    $pull: { // quitamos los tags que lleven una cadena de texto especifica
+      tags: { $in: ["appliance", "school"]}
+    }
+  })

@@ -1,0 +1,10 @@
+use("platzi_store")
+
+db.products.updateOne(
+    {_id: ObjectId("65d4ca6877adb3d2c2cdc9b5")},
+    {
+        $inc: { // Incrementa los valores numericos seleccionados
+            price: 200,
+        }
+    }
+)

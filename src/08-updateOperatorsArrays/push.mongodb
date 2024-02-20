@@ -1,0 +1,20 @@
+
+use("platzi_store")
+
+// Agregamos un nuevo valor al array 'tags'
+/*
+db.inventory.updateOne({_id: 4}, {
+  $push: { 
+    tags: "headphone"
+  }
+})
+*/
+
+// Agregamos varios valores al array 'tags'
+db.inventory.updateOne({_id: 4}, {
+    $push: { 
+      tags: { 
+        $each:["headphone","wireless"]
+      }
+    }
+})

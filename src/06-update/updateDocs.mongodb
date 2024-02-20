@@ -1,0 +1,12 @@
+use("platzi_store")
+
+db.products.updateOne(
+    {_id: ObjectId("65d4ca6877adb3d2c2cdc9b5")}, // Cuando se use un ID auto-generado por MondongoDB se debe buscar con la clausula ObjectId
+    {
+        $set: {
+            name: "Ruffles",
+            price: 18,
+            tags: ['A', 'B', 'C', 'D']
+        }
+    }
+)
